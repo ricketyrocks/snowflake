@@ -1,0 +1,15 @@
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: stateful-snowflake
+spec:
+  serviceName: snowflake
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: snowflake
+    spec:
+      containers:
+      - name: whatsmyname
+        image: whatsmyname:v1
