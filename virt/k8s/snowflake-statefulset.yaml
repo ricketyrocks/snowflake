@@ -13,3 +13,6 @@ spec:
       containers:
       - name: whatsmyname
         image: whatsmyname:v1
+        env:
+          - name: TOTAL_REPLICAS
+            value: "3"
